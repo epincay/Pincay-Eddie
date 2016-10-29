@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JSON EXAMPLES - CIT 261 Mobile Applications</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+	<section id="tests">
+		<h1>JSON EXAMPLES</h1>
+		<div id="content" >
+
+		</div>
+	</section>
+	<script type="text/javascript">
+
+            var objetos = {"Personas":[
+                            {"nombre":"Jorge","edad":23},
+                            {"nombre":"Eddie","edad":17},
+                            {"nombre":"Silvia","edad":25},
+                            {"nombre":"Daniela","edad":20}
+                    ]};
+
+            document.getElementById('content').innerHTML = objetos.Personas[1].nombre+ " y "+objetos.Personas[2].nombre;
+            /*Declarar un objeto JSON con una funcion en un atributo
+             notese el uso de "this" que hace referencia a el objeto en sí, es decir a persona*/
+            var persona = {"name":"Eddie","lastname":"Pincay","edad":26,
+                                      "avisar":function(){alert("Hola soy "+this.name +" de " +this.edad +" años");}
+                                     };
+
+            persona.avisar();
+	</script>
+    </body>	
+</html>
+
