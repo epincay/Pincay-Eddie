@@ -1,0 +1,596 @@
+/*--Author: Eddie Pincay
+Author URL: http://edsicompu.com
+--*/
+body{
+	padding:0;
+	margin:0;
+	background:#FFF;
+}
+body a{
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+input[type="button"],input[type="submit"]{
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+	padding:0;
+}	
+p{
+	margin:0;
+	padding:0;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+label{
+	margin:0;
+}
+button{
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+img {
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+/*-- /reset code --*/
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight:100;
+}
+/*-- Navigation --*/
+/* Effect 20: 3D side */
+.cl-effect-20 a {
+	line-height: 2em;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	perspective: 800px;
+}
+
+.cl-effect-20 a span {
+	font-size: 19px;
+    color: #fff;
+	position: relative;
+	display: inline-block;
+	padding: 15px 15px;
+	background:transparent;
+	box-shadow: inset 0 3px rgb(231, 233, 234);
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+	transition: background 0.6s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+}
+
+.cl-effect-20 a span::before {
+	padding: 15px 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	color: #2f4351;
+	/*-- W3layouts --*/
+	content: attr(data-hover);
+	-webkit-transform: rotateX(270deg);
+	-moz-transform: rotateX(270deg);
+	transform: rotateX(270deg);
+	-webkit-transition: -webkit-transform 0.6s;
+	-moz-transition: -moz-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	pointer-events: none;
+}
+
+.cl-effect-20 a:hover span,
+.cl-effect-20 a:focus span {
+	background: #2f4351;
+}
+
+.cl-effect-20 a:hover span::before,
+.cl-effect-20 a:focus span::before {
+	-webkit-transform: rotateX(10deg);	
+	-moz-transform: rotateX(10deg);
+	transform: rotateX(10deg);
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -15px;
+    margin-top: -7px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 30px;
+	font-family: 'Montserrat', sans-serif;
+}
+.navbar-wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
+}
+.navbar-wrapper > .container {
+	padding-right: 0;
+	padding-left: 0;
+}
+.navbar-wrapper .navbar {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+	width: auto;
+}
+.navbar-inverse {
+    background-color:transparent;
+    border-color:transparent;
+}
+@media (min-width: 768px) {
+	.navbar-wrapper {
+	margin-top: 20px;
+}
+	.navbar-wrapper .container {
+	padding-right: 15px;
+    padding-left: 15px;
+}
+	.navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+}
+	.navbar-wrapper .navbar {
+    border-radius: 4px;
+}
+}
+/*-- /Navigation --*/
+/*-- Banner Section --*/
+.carousel {
+
+}
+.carousel-caption {
+	z-index: 10;
+}
+.carousel .item {
+	background-color: #777;
+}
+.carousel-inner > .item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.carousel, .carousel .item {
+	height:500px;
+}
+/*-- /Banner Section --*/
+/*-- Sandbox Section --*/
+section.sandbox {
+	padding:100px 0;
+} 
+section.sandbox h3.text-center, section.our-services h3.text-center, section.our-events h3.text-center, section.our-gallery h3.text-center, section.our-testimonials h3.text-center, section.our-contacts h3.text-center {
+	font-size:35px;
+	font-weight:normal;
+	/*-- Agile ITS --*/
+	padding:20px 0;
+	font-family: 'Montserrat', sans-serif;
+} 
+section.sandbox p.text-center , section.our-services p.text-center, section.our-events p.text-center, section.our-gallery p.text-center, section.our-testimonials p.text-center, section.our-contacts p.text-center {
+	font-size:18px;
+	font-weight:300;
+	padding:10px 0 50px;
+}
+section.sandbox .sandbox-info h4 {
+	font-size:25px;
+	font-weight:normal;
+	padding-bottom:20px;
+        color: #8A0B00;
+	font-family: 'Montserrat', sans-serif;
+}
+section.sandbox p.abt {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+    padding-bottom: 20px;
+    color: #002573;
+}
+section.sandbox a {
+    text-decoration: none;
+    color: #002573;
+}
+/*-- /Sandbox Section --*/
+
+/*-- Footer --*/
+section.footer {
+	background-color:#222;
+	padding: 60px 0 50px;
+	color:#fff;
+}
+section.footer h2{
+	font-size:30px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:500;
+	padding-bottom: 10px;
+	text-transform:uppercase;
+}
+.copyright p {
+	text-align:center;
+	font-size:16px;
+	font-weight:200;
+}
+.footer-center p {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 100;
+    padding-bottom: 10px;
+    color: #999;
+}
+/*-- /Footer --*/
+/*-- slide animations --*/
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+/*-- /slide animations --*/
+/*-- Back To Top --*/
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.5) url(../images/cd-top-arrow.png) no-repeat center 50%;
+  visibility: hidden;
+    background-size: 40px;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+} 
+.cd-top:hover {
+  background-color:#080808;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 50px;
+    width: 50px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+/*-- /Back To Top --*/
+
+/*-- responsive design --*/
+@media(max-width: 1600px){
+	.carousel, .carousel .item {
+    height: 795px;
+}
+}
+
+@media (max-width: 1366px) {
+.carousel, .carousel .item {
+    height: 759px;
+}
+}
+
+@media (max-width: 1280px) {
+.carousel, .carousel .item {
+    height: 710px;
+}
+}
+
+@media (max-width: 1080px) {
+.carousel, .carousel .item {
+    height: 598px;
+}
+.nav>li>a {
+	padding: 15px 6px;
+}
+section.our-gallery img.img-responsive {
+	width:230px;
+}
+section.footer h4 {
+	text-align:center;
+	padding: 20px 0 10px;
+}
+.footer-center p, .footer-right p {
+	text-align:center;
+	line-height:25px;
+	padding: 10px 0;
+}
+.col-lg-4.footer-right {
+    text-align: center;
+}
+section.footer .footer-right ul.social-icons2 {
+	text-align:center;
+}
+section.footer .footer-center .form-control {
+    margin-bottom: -20px;
+}
+}
+
+@media (max-width: 1050px) {
+.carousel, .carousel .item {
+    height: 581px;
+}
+}
+
+@media (max-width: 1024px) {
+.carousel, .carousel .item {
+    height: 565px;
+}
+section.sandbox {
+    padding: 50px 0 80px;
+}
+section.footer {
+	padding:50px 0;
+}
+}
+
+@media (max-width: 991px) {
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 245px;
+    margin-bottom: 20px;
+	font-size: 35px;	
+}
+.navbar-nav {
+	margin: 0 -20px 0 -55px;
+}
+.carousel, .carousel .item {
+    height: 548px;
+}
+section.sandbox p.abt {
+    font-size: 15px;
+}
+}
+
+@media (max-width: 900px) {
+.carousel, .carousel .item {
+    height: 497px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -15px 0 30px 245px;
+}
+section.sandbox .sandbox-info h4 {
+	padding-bottom:15px;
+}
+section.sanbox p.abt {
+	padding-bottom:10px;
+	line-height: 25px;
+}
+}
+
+@media (max-width: 800px) {
+.navbar-nav {
+    margin: 0 -28px 0 -51px;
+}
+.carousel, .carousel .item {
+    height: 440px;
+}
+}
+
+@media (max-width: 768px) {
+.carousel, .carousel .item {
+    height: 423px;
+}
+.col-lg-4.footer-center {
+    padding: 30px 30px;
+}
+section.footer .footer-center .form-control {
+    margin-bottom: -17px;
+}
+}
+
+@media (max-width: 736px) {
+.navbar-nav {
+    margin:0 auto;
+    background-color: rgba(0, 0, 0, 0.58);
+}
+.cl-effect-20 a span {
+	width:100%;
+	text-align:center;
+}
+.carousel, .carousel .item {
+    height: 350px;
+}
+section.sandbox {
+	text-align:-webkit-center;
+}
+section.sandbox .sandbox-info h4 {
+	padding:30px 0 20px;
+}
+section.footer .footer-center .form-control {
+	margin-bottom:-15px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -10px 0 30px 260px;
+}
+.navbar-toggle {
+	margin-top:20px;
+}
+}
+
+@media (max-width: 667px) {
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -10px 0 30px 230px;
+}
+.carousel, .carousel .item {
+    height: 311px;
+}
+}
+
+@media (max-width: 640px) {
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -10px 0 30px 210px;
+}
+}
+
+@media (max-width: 600px) {
+.carousel, .carousel .item {
+    height: 328px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -10px 0 30px 185px;
+}
+}
+
+@media (max-width: 568px) {
+.carousel, .carousel .item {
+    height: 256px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -10px 0 30px 170px;
+}
+}
+
+@media (max-width: 480px) {
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -10px 0 30px 135px;
+}
+section.sandbox h3.text-center, section.our-services h3.text-center, section.our-events h3.text-center, section.our-gallery h3.text-center, section.our-testimonials h3.text-center, section.our-contacts h3.text-center {
+	font-size:30px;
+}
+section.sandbox {
+    padding: 35px 0 50px;
+}
+section.sandbox p.text-center, section.our-services p.text-center, section.our-events p.text-center, section.our-gallery p.text-center, section.our-testimonials p.text-center, section.our-contacts p.text-center {
+	padding: 5px 0 30px;
+}
+}
+
+@media (max-width: 414px) {
+.carousel, .carousel .item {
+    height: 223px;
+}
+#features p {
+    font-size: 16px;
+}	
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin: -11px 0 0 10px;
+}
+section.sandbox {
+    padding: 25px 0 50px;
+}
+section.footer h2 {
+    font-size: 22px;
+}
+ section.sandbox p.text-center, section.our-services p.text-center, section.our-events p.text-center, section.our-gallery p.text-center, section.our-testimonials p.text-center, section.our-contacts p.text-center {
+    padding: 5px 0 30px;
+    font-size: 16px;
+    line-height: 1.9em;
+}
+}
+
+@media (max-width: 384px) {
+.carousel, .carousel .item {
+    height: 206px;
+}
+}
+
+@media (max-width: 375px) {
+.carousel, .carousel .item {
+    height: 201px;
+}
+}
+
+@media (max-width: 320px) {
+.carousel, .carousel .item {
+    height: 170px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	font-size: 30px;
+	margin: -5px 0 0 0px;
+}
+section.sandbox h3.text-center, section.our-services h3.text-center, section.our-events h3.text-center, section.our-gallery h3.text-center, section.our-testimonials h3.text-center, section.our-contacts h3.text-center {
+	padding:20px 0 10px;
+	font-size: 27px;
+}
+section.sandbox p.text-center, section.our-services p.text-center, section.our-events p.text-center, section.our-gallery p.text-center, section.our-testimonials p.text-center, section.our-contacts p.text-center {
+    font-size: 14px;
+}
+section.sandbox .sandbox-info h4 {
+    padding: 30px 0 15px;
+}
+section.footer h2 {
+    font-size: 20px;
+}
+}
