@@ -88,34 +88,136 @@ and open the template in the editor.
             <div class="container">
                 <div class="row">
                     
-                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="sandbox-info">
                             <h4 class="slideanim">Example For Loop</h4>
-                            <p class="abt slideanim" id="loop"></p>
+                            <p class="abt slideanim">In this example is created a count with loop for.</p>
+                            <p>Insert a number : </p><input name="insertnumber" type="text" id="number">
+                            <input type="button" onclick="createCount()" value="Click for Result" >
+                            <p class="abt slideanim text-justify" id="result"></p>
                             
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="sandbox-info">
                             <h4 class="slideanim">Example For While</h4>
-                            <p class="abt slideanim" id="loop"></p>
+                            <p class="abt slideanim">In this example is created a count with loop while.</p>
+                            <p>Insert a number : </p><input name="insertnumber" type="text" id="number1">
+                            <input type="button" onclick="createCount1()" value="Click for Result" >
+                            <p class="abt slideanim text-justify" id="result1"></p>
                             
                         </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="sandbox-info">
+                            <h4 class="slideanim">Example For Do While</h4>
+                            <p class="abt slideanim">In this example is created a count with loop do while.</p>
+                            <p>Insert a number : </p><input name="insertnumber" type="text" id="number2">
+                            <input type="button" onclick="createCount2()" value="Click for Result" >
+                            <p class="abt slideanim text-justify" id="result2"></p>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <h3 class="text-center slideanim">Examples Conditional Staments</h3>
+            <p class="text-center slideanim">I have a examples to condicional staments and use loop for.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="sandbox-info">
+                        
+                        <p class="abt slideanim">In this example you insert a number and then you seen an all odd numbers between 0 to the number you insert.</p>
+                        <p>Insert a number : </p><input name="insertnumber" type="text" id="number3" >
+                        <input type="button" onclick="createOddNumber()" value="Click for Result" >
+                        <p class="abt slideanim text-justify" id="result3"></p>
+                            
                     </div>
                 </div>
             </div>
-
+            <h3 class="text-center slideanim">Examples Array and Associative Arrays </h3>            
+            <div class="container">
+                <div class="row">
+                    <div class="sandbox-info">
+                        
+                        <p class="abt slideanim">In this example you insert a name, last name, phone and email. All information are stored in a associative arrays, then the information is displayed in a message.</p>
+                        <p>Insert a First Name : </p><input name="insertname" type="text" id="name" >
+                        <p>Insert a Last Name : </p><input name="insertlastname" type="text" id="lastname" >
+                        <p>Insert a Phone : </p><input name="insertphone" type="text" id="phone" >
+                        <p>Insert an Email : </p><input name="insertemail" type="email" id="email" >
+                        <input type="button" onclick="createArray()" value="Click for Result" >
+                        <p class="abt slideanim text-justify" id="array"></p>
+                            
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- /Sandbox Section -->
-        <!--That is LOOP FOR-->
+        <!--That is LOOP -->
         <script>
-        var cars = ["BMW", "Volvo", "Saab", "Ford"];
-        var i, len, text;
-        for (i = 0, len = cars.length, text = ""; i < len; i++) {
-            text += cars[i] + ", ";
-        }
-
-        document.getElementById("loop").innerHTML = text;
+            function createCount(){
+                var num = document.getElementById("number").value;
+                var i, count;
+                
+                for(i = 0 , count = ""; i <= num ; i ++) {
+                     count += i + " ";
+                }
+                document.getElementById("result").innerHTML = "Count: " + count;
+            }
+            function createCount1(){
+                var num = document.getElementById("number1").value;
+                var i = 0, count = "";
+                
+                while(i <= num) {
+                     count += i + " ";
+                     i++;
+                }
+                document.getElementById("result1").innerHTML = "Count: " + count;
+            }
+            function createCount2(){
+                var num = document.getElementById("number2").value;
+                var i = 0, count = "";
+                
+                do {
+                     count += i + " ";
+                     i++;
+                }while(i <= num);
+                document.getElementById("result2").innerHTML = "Count: " + count;
+            }
+            function createOddNumber(){
+                var num = document.getElementById("number3").value;
+                var i, count, odd;
+                
+                 for(i = 0 , count = ""; i <= num ; i ++) {
+                    odd = i % 2; 
+                    if(odd == 1){
+                        count += i + " ";                                                
+                    }                     
+                }
+                document.getElementById("result3").innerHTML = "Count: " + count;
+            }
+            function createArray(){
+                var name = document.getElementById("name").value;
+                var lname = document.getElementById("lastname").value;
+                var phone = document.getElementById("phone").value;
+                var email = document.getElementById("email").value;
+                var i;
+                var info = [0];
+                
+                 for(i = 0 ; i <= 3 ; i ++) {                     
+                    if(i == 0){
+                        info["name"] = name;                                                
+                    }else if (i == 1){
+                        info["lastname"] = lname;
+                    }else if(i == 2){
+                        info["phone"] = phone;
+                    }else{
+                        info["email"] = email;
+                    }                     
+                }
+                document.getElementById("array").innerHTML = "Hello, " + info["name"] +" "+ info["lastname"] +". Your phone number is : " 
+                        + info["phone"] + " and your email address is " + info["email"];
+            }
         </script>
     
         <!-- Footer Section -->
