@@ -222,7 +222,18 @@ section.sandbox a {
     color: #002573;
 }
 /*-- /Sandbox Section --*/
-
+/*-- /Table/ --*/
+table{
+    background-color: #d9edf7;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    background-color: #d9534f;
+    color: #fff;
+    text-align: center;
+}
 /*-- Footer --*/
 section.footer {
 	background-color:#222;
