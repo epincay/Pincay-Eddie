@@ -225,6 +225,7 @@ section.sandbox a {
 /*-- /Table/ --*/
 table{
     background-color: #d9edf7;
+    font-family: 'Montserrat', sans-serif;
 }
 th, td {
     padding: 10px;
